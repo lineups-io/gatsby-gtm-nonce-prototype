@@ -22,6 +22,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         allPageHeaders: [
+          'X-Frame-Options: SAMEORIGIN',
           `Content-Security-Policy: script-src 'self' 'nonce-${nonce}'; img-src 'self' www.googletagmanager.com; frame-ancestors *`
         ]
       }
