@@ -22,7 +22,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         allPageHeaders: [
-          `Content-Security-Policy: script-src 'self' 'nonce-${nonce}'; img-src www.googletagmanager.com`
+          `Content-Security-Policy: script-src 'self' 'nonce-${nonce}'; img-src 'self' www.googletagmanager.com`
         ]
       }
     }
