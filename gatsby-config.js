@@ -23,7 +23,7 @@ module.exports = {
       options: {
         allPageHeaders: [
           'X-Frame-Options: SAMEORIGIN',
-          `Content-Security-Policy: script-src 'self' 'nonce-${nonce}'`
+          `Content-Security-Policy: script-src 'nonce-${nonce}' 'self'`
         ]
       }
     }
