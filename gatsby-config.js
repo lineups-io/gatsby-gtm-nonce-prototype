@@ -23,7 +23,7 @@ module.exports = {
       options: {
         allPageHeaders: [
           'X-Frame-Options: SAMEORIGIN',
-          `Content-Security-Policy: script-src 'self' 'nonce-${nonce}'; img-src 'self' www.googletagmanager.com; frame-ancestors *`
+          `Content-Security-Policy: script-src 'nonce-${nonce}'; img-src www.googletagmanager.com; frame-ancestors *`
         ]
       }
     }
