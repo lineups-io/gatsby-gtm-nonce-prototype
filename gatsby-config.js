@@ -23,7 +23,7 @@ module.exports = {
       options: {
         allPageHeaders: [
           'X-Frame-Options: SAMEORIGIN',
-          `Content-Security-Policy: script-src 'unsafe-eval' 'unsafe-inline' https://tagmanager.google.com/ https://www.googletagmanager.com/; style-src 'unsafe-inline' https://tagmanager.google.com/ https://fonts.googleapis.com/; img-src 'unsafe-inline' https://ssl.gstatic.com/`
+          `Content-Security-Policy: default-src 'self'; script-src 'unsafe-eval' 'unsafe-inline' https://tagmanager.google.com/ https://www.googletagmanager.com/; style-src 'unsafe-inline' https://tagmanager.google.com/ https://fonts.googleapis.com/; img-src 'unsafe-inline' https://ssl.gstatic.com/`
         ]
       }
     }
