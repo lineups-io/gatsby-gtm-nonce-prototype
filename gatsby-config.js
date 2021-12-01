@@ -23,7 +23,7 @@ module.exports = {
       options: {
         allPageHeaders: [
           'X-Frame-Options: SAMEORIGIN',
-          `Content-Security-Policy: script-src 'nonce-${nonce}' 'self'`
+          `Content-Security-Policy: base-uri 'self'; object-src 'none'; script-src 'strict-dynamic' 'unsafe-inline' https: http: 'nonce-${nonce}' 'unsafe-eval'; report-uri https://csp.withgoogle.com/csp/devsite/v2`
         ]
       }
     }
