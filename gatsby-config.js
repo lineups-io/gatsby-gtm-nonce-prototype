@@ -1,7 +1,30 @@
+const { v4: uuidv4 } = require("uuid")
+
+const nonce = uuidv4()
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "My Gatsby Site",
   },
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-global-context',
+      options: {
+        context: {
+          nonce,
+          gtmContainerId: 'GTM-WXQLXHW'
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        allPageHeaders: [
+          `Content-Security-Policy: script-src 'nonce-${nonce}'; img-src www.googletagmanager.com`
+        ]
+      }
+    }
+  ],
 };
